@@ -23,13 +23,13 @@ Unite is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, 
 ----------------------------------------------- */
 body {
 	color: #6B6B6B;
-	word-wrap: break-word;
 	line-height: 1.7;
 	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
-  color: #54397E;
+  color: #0288D1;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -51,7 +51,7 @@ a:focus {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: 100;
-	color: #54397E;
+	color: #1565C0;
 }
 h1,
 .h1 {
@@ -306,7 +306,7 @@ object {
 ----------------------------------------------- */
 
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 1em; 1.5em;
 }
 
 /* Make sure select elements fit in widgets */
@@ -314,17 +314,26 @@ object {
 	max-width: 100%;
 }
 
+.widget h3 {
+  margin-top: 40px;
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
 .widget > ul > li,
 li.recentcomments {
 	border-bottom: 1px solid #EEE;
 	position: relative;
 	display: block;
-	padding: 10px 15px;
-}
-.widget ul {
-  padding: 10px 10px;
+	padding: 10px 0;
 }
 
+.widget ul {
+  padding: 0;
+}
+.widget ul li {
+  padding-left: .2em;
+}
 .widget-title {
   border-bottom: 1px solid #eee;
 }
@@ -387,11 +396,11 @@ li.recentcomments {
   float: left;
   padding-right: 10px;
   font-size: 20px;
-  color: #54397E;
+  color: #0288D1;
 }
 .btn-primary, .label-primary {
-	background-color: #54397E;
-	border-color: #54397E;
+	background-color: #0288D1;
+	border-color: #0288D1;
 }
 .btn-primary:hover, .label-primary[href]:hover, .label-primary[href]:focus, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, #image-navigation .nav-previous a:hover, #image-navigation .nav-next a:hover {
 	background-color: #4b3371;
@@ -422,14 +431,14 @@ li.recentcomments {
   padding: 12px !important;
   background: transparent !important;
   border: 1px solid #DDD;
-  color: #54397E !important;
+  color: #0288D1 !important;
 	-webkit-transition: all 0.2s;
 	   -moz-transition: all 0.2s;
 	     -o-transition: all 0.2s;
 	        transition: all 0.2s;
 }
 #infinite-handle span:hover {
-  background-color: #54397E !important;
+  background-color: #0288D1 !important;
   color: #fff !important;
 }
 /* =Custom Styles
@@ -447,6 +456,23 @@ li.recentcomments {
 	margin-top: -20px;
 	margin-bottom: 20px;
 }
+.site-title,
+.site-title a {
+  color: #455A64;
+  font-weight: 500;
+}
+
+.site-description {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #455A64;
+}
+
+/* =Header
+----------------------------------------------- */
+
+.header-area {
+  background-color: #B3E5FC;
+}
 
 /* =Navigation
 ----------------------------------------------- */
@@ -461,7 +487,7 @@ li.recentcomments {
 .site-main [class*="navigation"] a:hover,
 .more-link:hover {
   color: #fff;
-  background: #54397E;
+  background: #0288D1;
   text-decoration: none;
 }
 .more-link {
@@ -480,18 +506,19 @@ li.recentcomments {
 	text-align: right;
 }
 .navbar.navbar-default {
-  background-color: #54397E;
-  font-weight: 200;
+  background-color: #0288D1;
+  font-weight: 400;
+  /*font-family: "Roboto Condensed", sans-serif;*/
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
-  border-right: 1px solid rgba(0,0,0,.2);
-	box-shadow: 1px 0 0 rgba(255, 255, 255, 0.10);
+  border-right: 1px solid rgba(255,255,255,.2);
+	/*box-shadow: 1px 0 0 rgba(255, 255, 255, 0.10);*/
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-	border-right: 1px solid rgba(0,0,0,.2);
+	border-right: 1px solid rgba(255,255,255,.2);
 	border-left: none;
 }
 .navbar {
@@ -513,13 +540,13 @@ li.recentcomments {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #0277BD;
 }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
 	color: #fff;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	border-left: 1px solid #0277BD;
 }
 .dropdown-menu > li > a {
 	padding: 18px 20px;
@@ -527,11 +554,11 @@ li.recentcomments {
 }
 .dropdown-menu,
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-	background-color: #54397E;
+	background-color: #0288D1;
 	border: none;
 }
 .dropdown-menu .divider {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: #0277BD;
 }
 .navbar-nav > li > .dropdown-menu {
 	padding: 0;
@@ -651,25 +678,28 @@ p.logged-in-as {
 .entry-meta .fa {
   font-size: 16px;
   margin-right: 3px;
-  color: #54397E;
+  color: #0288D1;
 }
 .entry-meta span {
   margin-right: 10px;
 }
 .entry-title {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 100;
-  color: #54397E;
+  color: #0288D1;
+}
+.format-standard.hentry .entry-title {
+  font-size: 28px;
 }
 .btn.btn-primary.read-more {
   float: right;
   border: 1px solid #DDD;
-  color: #54397E;
+  color: #0288D1;
   background-color: transparent;
 }
 .btn.btn-primary.read-more:hover {
 	color: #FFF;
-  background-color: #54397E;
+  background-color: #0288D1;
 }
 .search .more-link {
     display: none;
@@ -688,7 +718,7 @@ hr.section-divider:after {
   z-index: 10000;
   content: "\f004";
   font-family: FontAwesome;
-  color: #54397E;
+  color: #0288D1;
   position: absolute;
   top: -23px;
   left: 50%;
@@ -712,7 +742,7 @@ hr.section-divider:after {
 }
 #image-navigation .nav-previous a:hover,
 #image-navigation .nav-next a:hover{
-  background-color: #54397E;
+  background-color: #0288D1;
   color: #fff;
 }
 #image-navigation .nav-previous,
@@ -737,18 +767,18 @@ hr.section-divider:after {
   text-align: right;
 }
 #colophon {
-  background-color: #54397E;
+  background-color: #FF6D00;
   padding: 10px 0;
   margin-top: 20px;
 }
 .site-info a {
-  color: #eee;
+  color: #000;
 }
 .site-info a:hover {
-	color: #999;
+	color: #000;
 }
 .site-info {
-  color: #999;
+  color: #000;
   font-size: 12px;
 }
 .footer-nav.nav > li > a:hover {
@@ -819,7 +849,7 @@ hr.section-divider:after {
 /* =Slider
 ----------------------------------------------- */
 .carousel-caption h4 {
-	background: #54397e;
+	background: #0288D1;
   background: rgba(84, 57, 126,0.7);
   padding: 15px;
   color: #fff;

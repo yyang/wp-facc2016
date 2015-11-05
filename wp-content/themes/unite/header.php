@@ -9,21 +9,22 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<div class="container header-area">
-		<?php do_action( 'before' ); ?>
-		<header id="masthead" class="site-header col-sm-12" role="banner">
+	<div class="wrapper header-area">
+		<div class="container">
+			<?php do_action( 'before' ); ?>
+			<header id="masthead" class="site-header col-sm-12" role="banner">
 
 				<div class="site-branding col-md-6">
 					<?php if( get_header_image() != '' ) : ?>
@@ -43,36 +44,39 @@
 					<?php endif; // header image was removed (again) ?>
 				</div>
 
-			<div class="social-header col-md-6">
-				<?php unite_social(); // Social icons in header ?>
+				<div class="social-header col-md-6">
+					<?php unite_social(); // Social icons in header ?>
+				</div>
+
+			</header><!-- #masthead -->
+		</div>
+	</div>
+
+	<!-- .site-navigation -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
 			</div>
 
-		</header><!-- #masthead -->
-	</div>
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-		        <div class="navbar-header">
-		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		            </button>
-
-		        </div>
-
-				<?php
-		            wp_nav_menu( array(
-		                'theme_location'    => 'primary',
-		                'depth'             => 2,
-		                'container'         => 'div',
-		                'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-		                'menu_class'        => 'nav navbar-nav',
-		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-		                'walker'            => new wp_bootstrap_navwalker())
-		            );
-		        ?>
-		    </div>
-		</nav><!-- .site-navigation -->
+			<?php
+			wp_nav_menu( array(
+				'theme_location'    => 'primary',
+				'depth'             => 2,
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+				'menu_class'        => 'nav navbar-nav',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker())
+			);
+			?>
+		</div>
+	</nav><!-- .site-navigation -->
 
 	<div id="content" class="site-content container">

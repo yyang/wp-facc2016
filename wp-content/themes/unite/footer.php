@@ -17,9 +17,7 @@
 				</nav>
 
 				<div class="copyright col-md-6">
-					<?php do_action( 'unite_credits' ); ?>
-					<?php echo of_get_option( 'custom_footer_text', 'unite' ); ?>
-					<?php do_action( 'unite_footer' ); ?>
+					<p> &copy; Copyright <a href="mailto:resim@pku.edu.cn">RESIM Group</a>, 2015. </p>
 				</div>
 			</div>
 		</div><!-- .site-info -->

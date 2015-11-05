@@ -70,5 +70,4 @@
 
 		<?php edit_post_link( __( 'Edit', 'unite' ), '<i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
-	<hr class="section-divider">
 </article><!-- #post-## -->
