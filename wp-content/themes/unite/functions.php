@@ -205,3 +205,8 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 
 require get_template_directory() . '/inc/navwalker.php';
+
+//fix for cookie error while login.
+setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH )
+    setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
