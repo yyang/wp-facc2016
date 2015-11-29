@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px|Slabo+13px|Roboto:400,500|Roboto+Condensed);
+
 /* ------ Branding ------ */
 .site-branding {
   font-family: 'Slabo 27px';
@@ -17,6 +18,8 @@
   text-decoration: none;
 }
 
+/* ------ Navigation ------ */
+
 .navbar {
   background-color: #2196f3; /* Blue 500 */
   border-radius: 0;
@@ -24,7 +27,6 @@
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
-  height: 60px;
 }
 
 .navbar .navbar-nav > li > a {
@@ -61,7 +63,35 @@
   background-color: #1e88e5; /* Blue 600 */
 }
 
+.navbar-toggle {
+  border-color: #fff;
+}
 
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .navbar .dropdown-menu {
+    background-color: #1e88e5 !important; /* Blue 600 */
+  }
+  .navbar .dropdown-menu a {
+    text-align: center;
+    padding: 12px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  #menu-primary {
+    width: 100%;
+  }
+  .navbar-nav > li {
+    display: inline-block;
+    float: none;
+  }
+}
+
+/* ------ Entry Style ------ */
 
 h2 {
   font-family: 'Slabo 27px';
@@ -76,6 +106,8 @@ h2 {
   font-family: 'Roboto';
   color: #455a64; /* Blue Gray 700 */
 }
+
+/* ------ Homepage ------ */
 
 #homepage-banner {
   margin-bottom: 40px;
@@ -162,6 +194,7 @@ h2 {
 }
 
 /* ------ Footer ------- */
+
 #colophon {
   background-color: #cfd8dc; /* Blue Gray 100 */
   padding: 20px 0;
@@ -169,6 +202,7 @@ h2 {
 
 #colophon p {
   margin-bottom: 0;
+  text-align: center;
 }
 
 #colophon p,
