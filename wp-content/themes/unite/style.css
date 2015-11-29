@@ -93,12 +93,15 @@
 
 /* ------ Entry Style ------ */
 
-h2 {
+h1, h2, h3 {
   font-family: 'Slabo 27px';
   font-weight: 300;
+  color: #455a64; /* Blue Gray 700 */
+}
+
+h2 {
   font-size: 36px;
   text-align: center;
-  color: #455a64; /* Blue Gray 700 */
 }
 
 .entry-content {
