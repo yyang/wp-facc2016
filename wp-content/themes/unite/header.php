@@ -53,7 +53,7 @@
 	</div>
 
 	<!-- .site-navigation -->
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">

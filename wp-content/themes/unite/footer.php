@@ -16,7 +16,7 @@
 					<?php unite_footer_links(); ?>
 				</nav>
 
-				<div class="copyright col-md-6">
+				<div class="copyright">
 					<p> &copy; Copyright <a href="mailto:resim@pku.edu.cn">RESIM Group</a>, 2015. </p>
 				</div>
 			</div>
