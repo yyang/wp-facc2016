@@ -26,7 +26,7 @@
 			<?php do_action( 'before' ); ?>
 			<header id="masthead" class="site-header col-sm-12" role="banner">
 
-				<div class="site-branding col-md-6">
+				<div class="site-branding col-md-8 col-md-offset-2">
 					<?php if( get_header_image() != '' ) : ?>
 
 						<div id="logo">
